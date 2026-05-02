@@ -124,7 +124,7 @@ ul.ulbotoes {
     box-sizing: border-box;
     line-height: 0;
     list-style-type: none;
-    padding: 10px 0;
+    padding: 8px 0;
     position: fixed;
     text-align: center;
     background: #020209;
@@ -132,6 +132,7 @@ ul.ulbotoes {
     bottom: 0;
     right: 0px;
     display: inline-table;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
 /* General menu styling */
@@ -173,6 +174,23 @@ a.botao-fab {
     color: #c5c5c5;
 }
 
+@media (max-width: 600px) {
+    .textomenu {
+        font-size: 7.5px;
+    }
+    .li .botao img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    .botao-fab {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    .botao-fab img {
+        width: 20px !important;
+    }
+}
+
 /* Hiding the menu on larger screens */
 @media (min-width: 762px) {
     #mainMenu {
@@ -200,7 +218,7 @@ a.botao.active::after {
     left: 0;
     bottom: -4px; /* Adjust this to control the distance from the text */
     width: 100%;
-    height: 3px; /* Adjust the thickness of the bar */
+    height: 1.5px; /* Adjust the thickness of the bar */
     background-color: var(--primary); /* You can set this to any color you prefer */
 }
 
@@ -505,7 +523,7 @@ box-sizing: border-box;
   body.light-mode .menugeral,
   body.light-mode #mobile-contact-bar {
     background: #ffffff !important;
-    border-top: 1px solid #ddd;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
   }
 
   /* Universal text color fixes */
@@ -808,6 +826,31 @@ body.light-mode .new-search-type {
     background: #e5e7eb;
     color: #6b7280;
 }
+
+@media (max-width: 600px) {
+    #new-live-search > div:first-child {
+        padding: 4px 10px !important;
+    }
+    #new_search_input {
+        font-size: 13px !important;
+    }
+    .new-search-item {
+        padding: 8px 10px;
+    }
+    .new-search-logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .new-search-title {
+        font-size: 14px;
+    }
+    .new-search-type {
+        font-size: 9px;
+        padding: 2px 4px;
+    }
+}
 </style>
 
 <script>
@@ -946,102 +989,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	font-size: unset;
 }
 		<div class="dfxc">		<main class="main-site">			
-<section id="block-10" class="wdgt-home widget section widget_block" style="padding-top: 50px;">
-<style>
-/* From Uiverse.io by ilkhoeri */
-.wrapper {
-width: 100%;
-height: 100%;
-position: relative;
-text-align: center;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-padding: 50px 0;
-}
-.inner {
---w: 100px;
---h: 150px;
---translateZ: calc((var(--w) + var(--h)) + 0px);
---rotateX: -15deg;
---perspective: 1000px;
-position: relative;
-width: var(--w);
-height: var(--h);
-margin: 50px auto;
-z-index: 2;
-transform-style: preserve-3d;
-transform: perspective(var(--perspective));
-animation: rotating 20s linear infinite;
-}
-@keyframes rotating {
-from {
-transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-rotateY(0);
-}
-to {
-transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-rotateY(1turn);
-}
-}
-.card-uiverse {
-position: absolute;
-border: 2px solid rgba(var(--color-card));
-border-radius: 12px;
-overflow: hidden;
-inset: 0;
-transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
-translateZ(var(--translateZ));
-}
-.img-uiverse {
-width: 100%;
-height: 100%;
-object-fit: cover;
-background: #0000
-radial-gradient(
-circle,
-rgba(var(--color-card), 0.2) 0%,
-rgba(var(--color-card), 0.6) 80%,
-rgba(var(--color-card), 0.9) 100%
-);
-}
-</style>
-<div class="wrapper">
-<div class="inner" style="--quantity: 10;">
-<div class="card-uiverse" style="--index: 0;--color-card: 142, 249, 252;">
-<img class="img-uiverse" src="https://i.ibb.co/mCG48HFT/20260501-211510.png" alt="img0">
-</div>
-<div class="card-uiverse" style="--index: 1;--color-card: 142, 252, 204;">
-<img class="img-uiverse" src="https://i.ibb.co/tpPnJY6V/20260501-211343.png" alt="img1">
-</div>
-<div class="card-uiverse" style="--index: 2;--color-card: 142, 252, 157;">
-<img class="img-uiverse" src="https://i.ibb.co/DHfVxv3w/20260501-211055.png" alt="img2">
-</div>
-<div class="card-uiverse" style="--index: 3;--color-card: 215, 252, 142;">
-<img class="img-uiverse" src="https://i.ibb.co/8DYcGXgH/20260501-211010.png" alt="img3">
-</div>
-<div class="card-uiverse" style="--index: 4;--color-card: 252, 252, 142;">
-<img class="img-uiverse" src="https://i.ibb.co/0yfPKL4h/20260501-210805.png" alt="img4">
-</div>
-<div class="card-uiverse" style="--index: 5;--color-card: 252, 208, 142;">
-<img class="img-uiverse" src="https://i.ibb.co/VpxgTq20/20260501-210608.jpg" alt="img5">
-</div>
-<div class="card-uiverse" style="--index: 6;--color-card: 252, 142, 142;">
-<img class="img-uiverse" src="https://i.ibb.co/Fbr9cj6x/20260501-210448.png" alt="img6">
-</div>
-<div class="card-uiverse" style="--index: 7;--color-card: 252, 142, 239;">
-<img class="img-uiverse" src="https://i.ibb.co/DHvT5kTK/20260501-210724.jpg" alt="img7">
-</div>
-<div class="card-uiverse" style="--index: 8;--color-card: 204, 142, 252;">
-<img class="img-uiverse" src="https://i.ibb.co/r2623Qth/20260501-210342.png" alt="img8">
-</div>
-<div class="card-uiverse" style="--index: 9;--color-card: 142, 202, 252;">
-<img class="img-uiverse" src="https://i.ibb.co/dsGpdpWK/20260501-210104.png" alt="img9">
-</div>
-</div>
-</div>
-</section>
 
 <style>
 /* গ্রিড কন্টেইনার: এক লাইনে যতগুলো ধরে */
@@ -1087,12 +1034,45 @@ rgba(var(--color-card), 0.9) 100%
 /* মোবাইল স্ক্রিনের জন্য রেসপন্সিভ */
 @media (max-width: 600px) {
     .app-grid {
-        grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
-        gap: 12px 8px;
+        grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+        gap: 15px 5px;
     }
     .app-icon {
-        width: 65px;
-        height: 65px;
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+    }
+    .app-name {
+        font-size: 8.5px;
+    }
+}
+
+.apps-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    justify-content: flex-start;
+}
+.apps-row::-webkit-scrollbar {
+    height: 6px;
+}
+.apps-row::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+body.light-mode .apps-row::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+}
+.apps-row .app-card {
+    flex: 0 0 auto;
+    min-width: 80px;
+}
+@media (max-width: 600px) {
+    .apps-row .app-card {
+        min-width: 48px;
     }
 }
 </style>
@@ -1104,7 +1084,7 @@ rgba(var(--color-card), 0.9) 100%
             <span style="color: white;" class="apps-title-text">APPS</span>
         </div>
     </div>
-    <div class="app-grid">
+    <div class="app-grid apps-row">
     <div class="app-card" onclick="openAppDetails('modonpur', 'https://i.ibb.co.com/kVhXfNSc/img-mosjid.png', 'https://patient-unit-6ef9.hasanfreefireid0077.workers.dev')" style="cursor: pointer;">
         <img src="https://i.ibb.co.com/kVhXfNSc/img-mosjid.png" alt="modonpur" class="app-icon">
         <div class="app-name">modonpur</div>
@@ -1306,6 +1286,38 @@ rgba(var(--color-card), 0.9) 100%
     .copy-btn.copied {
       background-color: #047857 !important;
     }
+    
+    @media (max-width: 600px) {
+        .link-item {
+            padding: 0.25rem 0.5rem;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+        .logo-placeholder {
+            width: 24px;
+            height: 24px;
+            font-size: 12px;
+        }
+        .link-info h3 {
+            font-size: 0.75rem;
+        }
+        .link-info p {
+            font-size: 0.6rem;
+        }
+        .copy-btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.65rem;
+            min-width: 60px;
+        }
+        .app-details-card {
+            padding: 15px !important;
+            gap: 15px !important;
+        }
+        #detail-app-icon {
+            width: 80px !important;
+            height: 80px !important;
+        }
+    }
 </style>
 
 
@@ -1403,7 +1415,7 @@ function openAppDetails(name, iconSrc, downloadUrl, password = null) {
     if (developerContainer) developerContainer.style.display = 'none';
     
     // Hide main home sections
-    document.querySelectorAll('main.main-site > section, #watch-history-widget, #block-10, .wrapper').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('main.main-site > section, #watch-history-widget').forEach(el => el.style.display = 'none');
 
     // Show app details container
     const detailsContainer = document.getElementById('app-details-container');
@@ -1498,8 +1510,12 @@ function closeAppDetails() {
             <span style="color: white;" class="apps-title-text modes-title-text">MODE</span>
         </div>
     </div>
-    <div class="app-grid">
+    <div class="app-grid apps-row">
         <!-- Modes will go here -->
+        <div class="app-card" onclick="openAppDetails('Plants', 'https://i.ibb.co.com/RkSYSRdF/img-plants.jpg', 'https://anim-e-0.hasanfreefireid0077.workers.dev', 'Hasan0077')" style="cursor: pointer;">
+            <img src="https://i.ibb.co.com/RkSYSRdF/img-plants.jpg" alt="Plants" class="app-icon" style="object-fit: cover;">
+            <div class="app-name">Plants</div>
+        </div>
     </div>
 </div>
 
@@ -1512,10 +1528,6 @@ function closeAppDetails() {
     </div>
     <div class="app-grid">
         <!-- Games will go here -->
-        <div class="app-card" onclick="openAppDetails('Plants', 'https://i.ibb.co.com/RkSYSRdF/img-plants.jpg', 'https://anim-e-0.hasanfreefireid0077.workers.dev', 'Hasan0077')" style="cursor: pointer;">
-            <img src="https://i.ibb.co.com/RkSYSRdF/img-plants.jpg" alt="Plants" class="app-icon" style="object-fit: cover;">
-            <div class="app-name">Plants</div>
-        </div>
     </div>
 </div>
 
@@ -1529,6 +1541,103 @@ function closeAppDetails() {
     <div class="app-grid">
         <!-- Developer apps will go here -->
     </div>
+    
+<section id="block-10" class="wdgt-home widget section widget_block" style="padding-top: 50px;">
+<style>
+/* From Uiverse.io by ilkhoeri */
+.wrapper {
+width: 100%;
+height: 100%;
+position: relative;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+padding: 50px 0;
+}
+.inner {
+--w: 100px;
+--h: 150px;
+--translateZ: calc((var(--w) + var(--h)) + 0px);
+--rotateX: -15deg;
+--perspective: 1000px;
+position: relative;
+width: var(--w);
+height: var(--h);
+margin: 50px auto;
+z-index: 2;
+transform-style: preserve-3d;
+transform: perspective(var(--perspective));
+animation: rotating 20s linear infinite;
+}
+@keyframes rotating {
+from {
+transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+rotateY(0);
+}
+to {
+transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+rotateY(1turn);
+}
+}
+.card-uiverse {
+position: absolute;
+border: 2px solid rgba(var(--color-card));
+border-radius: 12px;
+overflow: hidden;
+inset: 0;
+transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+translateZ(var(--translateZ));
+}
+.img-uiverse {
+width: 100%;
+height: 100%;
+object-fit: cover;
+background: #0000
+radial-gradient(
+circle,
+rgba(var(--color-card), 0.2) 0%,
+rgba(var(--color-card), 0.6) 80%,
+rgba(var(--color-card), 0.9) 100%
+);
+}
+</style>
+<div class="wrapper">
+<div class="inner" style="--quantity: 10;">
+<div class="card-uiverse" style="--index: 0;--color-card: 142, 249, 252;">
+<img class="img-uiverse" src="https://i.ibb.co/mCG48HFT/20260501-211510.png" alt="img0">
+</div>
+<div class="card-uiverse" style="--index: 1;--color-card: 142, 252, 204;">
+<img class="img-uiverse" src="https://i.ibb.co/tpPnJY6V/20260501-211343.png" alt="img1">
+</div>
+<div class="card-uiverse" style="--index: 2;--color-card: 142, 252, 157;">
+<img class="img-uiverse" src="https://i.ibb.co/DHfVxv3w/20260501-211055.png" alt="img2">
+</div>
+<div class="card-uiverse" style="--index: 3;--color-card: 215, 252, 142;">
+<img class="img-uiverse" src="https://i.ibb.co/8DYcGXgH/20260501-211010.png" alt="img3">
+</div>
+<div class="card-uiverse" style="--index: 4;--color-card: 252, 252, 142;">
+<img class="img-uiverse" src="https://i.ibb.co/0yfPKL4h/20260501-210805.png" alt="img4">
+</div>
+<div class="card-uiverse" style="--index: 5;--color-card: 252, 208, 142;">
+<img class="img-uiverse" src="https://i.ibb.co/VpxgTq20/20260501-210608.jpg" alt="img5">
+</div>
+<div class="card-uiverse" style="--index: 6;--color-card: 252, 142, 142;">
+<img class="img-uiverse" src="https://i.ibb.co/Fbr9cj6x/20260501-210448.png" alt="img6">
+</div>
+<div class="card-uiverse" style="--index: 7;--color-card: 252, 142, 239;">
+<img class="img-uiverse" src="https://i.ibb.co/DHvT5kTK/20260501-210724.jpg" alt="img7">
+</div>
+<div class="card-uiverse" style="--index: 8;--color-card: 204, 142, 252;">
+<img class="img-uiverse" src="https://i.ibb.co/r2623Qth/20260501-210342.png" alt="img8">
+</div>
+<div class="card-uiverse" style="--index: 9;--color-card: 142, 202, 252;">
+<img class="img-uiverse" src="https://i.ibb.co/dsGpdpWK/20260501-210104.png" alt="img9">
+</div>
+</div>
+</div>
+</section>
 </div>
 
 <div id="watch-history-widget" style="display: none;">
@@ -1679,7 +1788,7 @@ function hideAllCustomContainers() {
 function toggleGeneric(id, e) {
     if (e) e.preventDefault();
     const container = document.getElementById(id);
-    const mainContent = document.querySelectorAll('main.main-site > section, #watch-history-widget, #block-10, .wrapper');
+    const mainContent = document.querySelectorAll('main.main-site > section, #watch-history-widget');
     
     if (container.style.display === 'none') {
         hideAllCustomContainers();
@@ -1744,7 +1853,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const el = document.getElementById(id);
                 if (el) el.style.display = 'none';
             });
-            document.querySelectorAll('main.main-site > section, #watch-history-widget, #block-10, .wrapper').forEach(el => el.style.display = '');
+            document.querySelectorAll('main.main-site > section, #watch-history-widget').forEach(el => el.style.display = '');
             window.scrollTo(0,0);
         }
     };
