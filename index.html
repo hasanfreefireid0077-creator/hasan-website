@@ -90,14 +90,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 
 <link rel='stylesheet' id='TOROFILM_Theme-css' href='https://watchanimeworld.net/wp-content/themes/torofilm/public/css/torofilm-public.css?ver=1768191344' type='text/css' media='all' />
-<script type="text/javascript" src="https://watchanimeworld.net/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <link rel="icon" href="https://i.ibb.co.com/gZNDr1W3/4857-3-optimized.png" sizes="32x32" />
 <link rel="icon" href="https://i.ibb.co.com/gZNDr1W3/4857-3-optimized.png" sizes="192x192" />
 <link rel="shortcut icon" href="https://i.ibb.co.com/gZNDr1W3/4857-3-optimized.png" />
 <link rel="apple-touch-icon" href="https://i.ibb.co.com/gZNDr1W3/4857-3-optimized.png" />
 <link rel="manifest" href="/manifest.json" />
-<meta name="theme-color" content="#111827" />
+<meta name="theme-color" content="#000000" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="msapplication-TileImage" content="https://i.ibb.co.com/gZNDr1W3/4857-3-optimized.png" />
@@ -540,6 +540,12 @@ box-sizing: border-box;
     border-top: 0.5px solid rgba(0, 0, 0, 0.1);
   }
 
+  body:not(.light-mode) .bd, body:not(.light-mode) .cont, body:not(.light-mode) .main-site {
+    background-color: #000000 !important;
+  }
+  body:not(.light-mode) {
+    background-color: #000000 !important;
+  }
   /* Universal text color fixes */
   body.light-mode, body.light-mode * {
     color: #000000 !important;
@@ -691,9 +697,9 @@ box-sizing: border-box;
                     function updateIcon() {
                         const icon = document.getElementById('themeIcon');
                         if (document.body.classList.contains('light-mode')) {
-                            // icon.className = 'fa fa-moon-o';
+                            icon.src = 'https://i.ibb.co.com/0yyc48Kh/img-dark-mode.png';
                         } else {
-                            // icon.className = 'fa fa-sun-o';
+                            icon.src = 'https://i.ibb.co.com/0yyc48Kh/img-dark-mode.png';
                         }
                     }
                     setTimeout(updateIcon, 100);
@@ -704,13 +710,12 @@ box-sizing: border-box;
                         
                         if (body.classList.contains('light-mode')) {
                             body.classList.remove('light-mode');
-                            // icon.className = 'fa fa-sun-o';
                             localStorage.setItem('theme', 'dark');
                         } else {
                             body.classList.add('light-mode');
-                            // icon.className = 'fa fa-moon-o';
                             localStorage.setItem('theme', 'light');
                         }
+                        updateIcon();
                     }
 
                     function toggleMenu(event) {
@@ -743,18 +748,12 @@ box-sizing: border-box;
                             }
                         </style>
                             </div>
-            <!--<div style="flex-shrink: 0;    margin-top: -50px;margin-right: -12px;">-->
-                <!--<button style="position: relative; background-color: transparent; border: none;" class="btn btn-login lnk aa-mdl blk" data-mdl="mdl-login">-->
-                <!--    <img src="https://new.anime-world.in/files/suzume-login-icon.png" alt="Icon" style="width: 40px; height: 50px;">-->
-                <!--    <span style="color: white; text-shadow: 0 0 5px white, 0 0 20px white; position: absolute; top: 50%; left: 30%; transform: translate(-50%, -50%); font-size: 10px;text-transform: none;">login</span>-->
-                <!--</button>-->
-            <!--</div>-->
         </div>
                 <div style="width: -webkit-fill-available;
     text-align: -webkit-center;padding-top:0px;padding-bottom:0px;">
         
         <div id="new-live-search" style="max-width: 37rem; width: 100%; position: relative; z-index: 5000; display: flex; align-items: center; flex-direction: column; margin: 0 auto;">
-    <div style="display: flex; width: 100%; background: rgba(17, 24, 39, 0.8); border: 2px solid #374151; border-radius: 25px; padding: 5px 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+    <div style="display: flex; width: 100%; background: rgba(0, 0, 0, 0.8); border: 2px solid #374151; border-radius: 25px; padding: 5px 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
         <input id="new_search_input" type="text" autocomplete="off" placeholder="Search apps, websites..." style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 16px;">
         <div style="display: flex; align-items: center;" onclick="document.getElementById('new_search_input').focus()"><img src="https://i.ibb.co.com/2YMjnZZX/img-search.png" alt="Search" style="width: 24px; height: 24px; object-fit: contain; cursor: pointer;"></div>
     </div>
@@ -1213,7 +1212,7 @@ body.light-mode .apps-row::-webkit-scrollbar-thumb {
       padding-right: 1rem;
     }
     .link-item {
-      background-color: rgba(17, 24, 39, 0.6);
+      background-color: rgba(0, 0, 0, 0.6);
       border: 1px solid #374151;
       border-radius: 0.5rem;
       padding: 0.5rem 1rem;
@@ -1340,7 +1339,7 @@ body.light-mode .apps-row::-webkit-scrollbar-thumb {
         <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
         Back to Apps
     </button>
-    <div class="app-details-card" style="display: flex; flex-direction: column; md:flex-row; gap: 30px; background: rgba(17, 24, 39, 0.8); border: 1px solid #374151; padding: 30px; border-radius: 20px;">
+    <div class="app-details-card" style="display: flex; flex-direction: column; md:flex-row; gap: 30px; background: rgba(0, 0, 0, 0.8); border: 1px solid #374151; padding: 30px; border-radius: 20px;">
         <div style="display: flex; gap: 20px; align-items: center;">
             <img id="detail-app-icon" src="" alt="App Icon" style="width: 120px; height: 120px; border-radius: 25px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
             <div>
@@ -1354,14 +1353,6 @@ body.light-mode .apps-row::-webkit-scrollbar-thumb {
         <div style="flex: 1;">
             <h3 style="color: white; font-size: 18px; margin-bottom: 10px; border-bottom: 1px solid #374151; padding-bottom: 10px;">About this app</h3>
             <p id="detail-app-desc" style="color: #d1d5db; font-size: 15px; margin-bottom: 25px; line-height: 1.6;"></p>
-            <div id="password-input-container" style="display: none; margin-top: 15px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 12px; border: 1px solid #374151;">
-                <p style="color: #9ca3af; font-size: 14px; margin-bottom: 10px;">This download is password protected.</p>
-                <div style="display: flex; gap: 10px;">
-                    <input type="password" id="app-password-input" placeholder="Enter Password" style="flex: 1; border: 1px solid #4b5563; background: #1f2937; color: white; padding: 8px 12px; border-radius: 8px; outline: none;">
-                    <button id="confirm-password-btn" style="background: #3b82f6; color: white; border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">Verify</button>
-                </div>
-                <p id="password-error" style="color: #ef4444; font-size: 12px; margin-top: 5px; display: none;">Incorrect password. Please try again.</p>
-            </div>
             <div style="display: flex; gap: 15px; margin-top: 20px;">
                 <button id="detail-app-download-btn" style="flex: 1; max-width: 200px; background: #22c55e; color: white; border: none; padding: 12px 20px; border-radius: 12px; font-weight: bold; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.2s;">
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
@@ -1372,15 +1363,6 @@ body.light-mode .apps-row::-webkit-scrollbar-thumb {
     </div>
 </div>
 <style>
-body.light-mode #password-input-container {
-    background: #f9fafb !important;
-    border-color: #e5e7eb !important;
-}
-body.light-mode #app-password-input {
-    background: #ffffff !important;
-    color: #111827 !important;
-    border-color: #d1d5db !important;
-}
 body.light-mode #app-details-container button {
     border-color: #d1d5db !important;
     background: #f3f4f6 !important;
@@ -1410,7 +1392,7 @@ body.light-mode .app-details-card span[style*="background: #374151"] {
 }
 </style>
 <script>
-function openAppDetails(name, iconSrc, downloadUrl, password = null) {
+function openAppDetails(name, iconSrc, downloadUrl) {
     // Hide apps container
     const appsContainer = document.getElementById('apps-container');
     if (appsContainer) appsContainer.style.display = 'none';
@@ -1439,49 +1421,13 @@ function openAppDetails(name, iconSrc, downloadUrl, password = null) {
         document.getElementById('detail-app-name').textContent = name;
         document.getElementById('detail-app-desc').textContent = `A great app. Get the latest version of ${name} and enjoy amazing features.`;
         
-        // Reset password UI
-        const passContainer = document.getElementById('password-input-container');
-        const passInput = document.getElementById('app-password-input');
-        const passError = document.getElementById('password-error');
-        passContainer.style.display = 'none';
-        passInput.value = '';
-        passError.style.display = 'none';
-
         const downloadBtn = document.getElementById('detail-app-download-btn');
         downloadBtn.onclick = function() {
             if (!downloadUrl) {
                 alert('Download link not available.');
                 return;
             }
-
-            if (password) {
-                // Toggle password input visibility
-                if (passContainer.style.display === 'none') {
-                    passContainer.style.display = 'block';
-                    passInput.focus();
-                } else {
-                    // If already visible, try to verify
-                    verifyPassword();
-                }
-            } else {
-                window.open(downloadUrl, '_blank');
-            }
-        };
-
-        const confirmBtn = document.getElementById('confirm-password-btn');
-        const verifyPassword = () => {
-            if (passInput.value === password) {
-                window.open(downloadUrl, '_blank');
-                passContainer.style.display = 'none';
-                passError.style.display = 'none';
-            } else {
-                passError.style.display = 'block';
-            }
-        };
-
-        confirmBtn.onclick = verifyPassword;
-        passInput.onkeypress = (e) => {
-            if (e.key === 'Enter') verifyPassword();
+            window.open(downloadUrl, '_blank');
         };
 
         window.scrollTo(0, 0);
@@ -1583,7 +1529,8 @@ margin: 50px auto;
 z-index: 2;
 transform-style: preserve-3d;
 transform: perspective(var(--perspective));
-animation: rotating 20s linear infinite;
+animation: rotating 40s linear infinite;
+will-change: transform;
 }
 @keyframes rotating {
 from {
@@ -1597,12 +1544,13 @@ rotateY(1turn);
 }
 .card-uiverse {
 position: absolute;
-border: 2px solid rgba(var(--color-card));
+border: 2px solid rgba(var(--color-card), 0.5);
 border-radius: 12px;
 overflow: hidden;
 inset: 0;
 transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
 translateZ(var(--translateZ));
+will-change: transform;
 }
 .img-uiverse {
 width: 100%;
@@ -2000,65 +1948,29 @@ function copyLink(button, url) {
 
 
 	</div>		
-			<!-- modal -->
-					<div class="mdl" id="mdl-signup">
-				<div class="mdl-cn anm-b">
-					<div class="mdl-hd">
-						<div class="mdl-title">Register</div>
-						<button class="btn lnk mdl-close aa-mdl" data-mdl="mdl-signup" type="button"><i class="fa-times"></i></button>
-					</div>
-					<form id="form-register-user">
-						<div class="mdl-bd">
-							<p class="inp">
-								<span class="ico">
-									<input id="form-register-names" type="text" required placeholder="User">
-									<i class="fa-user"></i>
-								</span>
-							</p>
-							<p class="inp">
-								<span class="ico">
-									<input id="form-register-emails" required type="text" placeholder="Email">
-									<i class="fa-envelope"></i>
-								</span>
-							</p>
-							<p class="inp">
-								<span class="ico">
-									<input type="password" id="form-register-passs" required placeholder="Password">
-									<i class="fa-lock"></i>
-								</span>
-							</p>
-							<p><button type="submit" class="btn snd blk">Signup</button></p>
-						</div>
-					</form>
-					<div class="mdl-ft tac">
-						Already have an account? <a id="to-login" href="javascript:void(0)">Login</a>
-					</div>
-				</div>
-				<div class="mdl-ovr aa-mdl" data-mdl="mdl-signup"></div>
-			</div>
 		<script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/torofilm/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/libs/swiper-js/swiper.min.js?ver=3.7.8" id="gs-swiper-js"></script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/libs/tippyjs/tippy-bundle.umd.min.js?ver=3.7.8" id="gs-tippyjs-js"></script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/libs/images-loaded/images-loaded.min.js?ver=3.7.8" id="gs-images-loaded-js"></script>
-<script type="text/javascript" id="gs-logo-public-js-extra">
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/libs/swiper-js/swiper.min.js?ver=3.7.8" id="gs-swiper-js"></script>
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/libs/tippyjs/tippy-bundle.umd.min.js?ver=3.7.8" id="gs-tippyjs-js"></script>
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/libs/images-loaded/images-loaded.min.js?ver=3.7.8" id="gs-images-loaded-js"></script>
+<script defer type="text/javascript" id="gs-logo-public-js-extra">
 /* <![CDATA[ */
 var GSLogoData = {"ajaxUrl":"https://watchanimeworld.net/wp-admin/admin-ajax.php","nonce":"1562d5a810"};
 //# sourceURL=gs-logo-public-js-extra
 /* ]]> */
 </script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/js/gs-logo.min.js?ver=3.7.8" id="gs-logo-public-js"></script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-content/themes/torofilm/public/js/jquery.js?ver=1768191344" id="funciones_public_jquery-js"></script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-content/themes/torofilm/public/js/owl.carousel.min.js?ver=1768191344" id="owl_carousel-js"></script>
-<script type="text/javascript" id="funciones_public_js-js-extra">
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-content/plugins/gs-logo-slider/assets/js/gs-logo.min.js?ver=3.7.8" id="gs-logo-public-js"></script>
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-content/themes/torofilm/public/js/jquery.js?ver=1768191344" id="funciones_public_jquery-js"></script>
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-content/themes/torofilm/public/js/owl.carousel.min.js?ver=1768191344" id="owl_carousel-js"></script>
+<script defer type="text/javascript" id="funciones_public_js-js-extra">
 /* <![CDATA[ */
 var torofilm_Public = {"url":"https://watchanimeworld.net/wp-admin/admin-ajax.php","nonce":"d04b52e6f9","access_error":"Access error","remove_favorite":"Removed from favorites","add_favorite":"Added to favorites","saved":"Data saved correctly","warning":"Image size must be less than 1MB","error_upload":"Upload error","trailer":""};
 var object_name = {"templateUrl":"https://watchanimeworld.net/wp-content/themes/torofilm"};
 //# sourceURL=funciones_public_js-js-extra
 /* ]]> */
 </script>
-<script type="text/javascript" src="https://watchanimeworld.net/wp-content/themes/torofilm/public/js/torofilm-public.js?ver=2.5.9" id="funciones_public_js-js"></script>
+<script defer type="text/javascript" src="https://watchanimeworld.net/wp-content/themes/torofilm/public/js/torofilm-public.js?ver=2.5.9" id="funciones_public_js-js"></script>
 
 
 
